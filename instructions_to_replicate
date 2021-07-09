@@ -1,0 +1,38 @@
+#CREATE REACT APP
+npx create-react-app app_name
+
+#START ON LOCAL HOST
+npm start
+
+#MIGHT HAVE TO INSTALL SANITY
+npm install -g @sanity/cli
+sanity login
+
+#INITILIZE SANITY PROJECT
+sanity init
+(this is from blog boilerplate)
+
+#START SANITY
+cd sanity_project_name
+sanity start
+
+#LINK REACT TO SANITY
+add client.js to src
+npm install @sanity/client
+find projectId from sanity.json or manage.sanity.io
+
+"client.js"
+import sanityClient from '@sanity/client'
+
+
+export default sanityClient({
+  projectId: "o4hb5vjg",
+  dataset: "production"
+})
+
+#LINK SANITY TO REACT
+manage.sanity.io -> project_name -> settings -> add core orgin add_name "localhost:3000"
+
+#GITHUB SETUP
+create new reposity,
+go to gitignore, delete forward slash on node modules
