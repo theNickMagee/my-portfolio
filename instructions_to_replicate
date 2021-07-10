@@ -1,22 +1,22 @@
-#CREATE REACT APP
+#-----------------------CREATE REACT APP
 npx create-react-app app_name
 
-#START ON LOCAL HOST
+#-------------------START ON LOCAL HOST
 npm start
 
-#MIGHT HAVE TO INSTALL SANITY
+#---------------------MIGHT HAVE TO INSTALL SANITY
 npm install -g @sanity/cli
 sanity login
 
-#INITILIZE SANITY PROJECT
+#----------------------INITILIZE SANITY PROJECT
 sanity init
 (this is from blog boilerplate)
 
-#START SANITY
+#-------------------START SANITY
 cd sanity_project_name
 sanity start
 
-#LINK REACT TO SANITY
+#-------------------------LINK REACT TO SANITY
 add client.js to src
 npm install @sanity/client
 find projectId from sanity.json or manage.sanity.io
@@ -30,9 +30,22 @@ export default sanityClient({
   dataset: "production"
 })
 
-#LINK SANITY TO REACT
+#------------------------LINK SANITY TO REACT
 manage.sanity.io -> project_name -> settings -> add core orgin add_name "localhost:3000"
 
-#GITHUB SETUP
+#---------------------GITHUB SETUP
 create new reposity,
 go to gitignore, delete forward slash on node modules
+do all the git stuff
+
+#----------------------INSTALL TAILWINDCSS
+index.css -> @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css")
+
+#---------------------get prose
+@import url("https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css");
+
+#cont
+create components, add default styling to index.css
+
+#-----------------------install react router
+npm install react-router-dom
